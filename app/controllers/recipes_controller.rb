@@ -17,7 +17,6 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.find_by(params[:id])
     @recipe = Recipe.create(recipe_params)
-    byebug
     redirect_to recipes_path
   end
 
